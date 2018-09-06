@@ -1,9 +1,10 @@
 import java.io.*;
+import java.util.*;
 
 public class Assignment1 {
 
     public static void main (String[] args) {
-        System.out.println("hello world");
+       Game newGame = new Game();
     }
 
     
