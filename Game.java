@@ -7,12 +7,10 @@ public class Game {
     }
 
     public void placeX(int row, int col){
-        if (x.equals("x")){
-
-        }
+       
     }
 
-    public void placeY(int row, int col){
+    public void placeO(int row, int col){
 
     }
 
@@ -20,10 +18,13 @@ public class Game {
         int i = 0;
         int j = 0;
         if (lastPlayer.equals("x")){
-            if (gameBoard[i][j].equals("x")){
-                count++;
-                
-            }
+            return true;
+        }
+        if (lastPlayer.equals("o")){
+            return true;
+        }
+        else{
+            return false;
         }
     }
 }
