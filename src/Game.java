@@ -1,17 +1,25 @@
+import java.util.*;
+
 public class Game {
 
-    private String[][] gameBoard = new String[3][3];
+    private static String[][] gameBoard = new String[3][3];
     private int count = 0;
+    private Random piecePlacement = new Random();
+    private int r;
+    private int c;
+    
     public Game(){
-
+        piecePlacement.ints(0,4);
+        r = piecePlacement;
+        c = piecePlacement;
     }
 
-    public void placeX(int row, int col){
-       
+    public static void placeX(int row, int col){
+       gameBoard[row][col] = "X";
     }
 
-    public void placeO(int row, int col){
-
+    public static void placeO(int row, int col){
+        gameBoard[row][col] = "O";
     }
 
     public boolean checkVictory(String lastPlayer){
@@ -25,6 +33,20 @@ public class Game {
         }
         else{
             return false;
+        }
+    }
+
+    public void computerMove(){
+        
+        if (player2.getPiece() == "X"){
+            if (gameBoard[r][c] = null){
+                Game.placeX(r,c);
+            }
+        }
+        if (player2.getPiece() == "O"){
+            if (gameBoard[r][c] = null){
+                Game.placeO(r,c);
+            }
         }
     }
 }
