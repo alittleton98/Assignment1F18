@@ -1,16 +1,16 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.*;
 
 public class tttGame{
-    private JFrame mainWindow;
-    private JLabel headerLabel;
-    private JPanel gamePanel;
+    public tttGame() {
 
-    public tttGame(){
-        setUPUI();
-    }
+        JFrame mainWindow = new JFrame("Tic-Tac-Toe");
+        JLabel headerLabel = new JLabel("Welcome to Tic-Tac-Toe", SwingConstants.CENTER);
+        JPanel gamePanel = new JPanel();
 
+<<<<<<< HEAD
     public static void main(String[] args){
         tttGame tictactoe = new tttGame();
         tictactoe.showGame();
@@ -29,35 +29,37 @@ public class tttGame{
 
     private void setUPUI(){
         mainWindow = new JFrame("Tic-Tac-Toe");
+=======
+        mainWindow.setVisible(true);
+>>>>>>> origin/Tyler
         mainWindow.setSize(400, 400);
-        mainWindow.setLayout(new GridLayout(3, 1));
-        mainWindow.addWindowListener(new WindowAdapter() {
-            public void closeWindow(WindowEvent windowEvent){
-                System.exit(0);
+        mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        gamePanel.setLayout(new GridLayout(3,1));
+        mainWindow.add(gamePanel);
+        gamePanel.add(headerLabel);
+
+
+        JButton start2player = new JButton("Start 2-player game");
+        start2player.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                mainWindow.dispose();
+                new twoPlayer();
             }
         });
-        headerLabel = new JLabel("", JLabel.CENTER);
+        gamePanel.add(start2player);
 
-        gamePanel = new JPanel();
-        gamePanel.setLayout(new FlowLayout());
-
-        mainWindow.add(headerLabel);
-        mainWindow.add(gamePanel);
-        mainWindow.setVisible(true);
+        JButton startComputer = new JButton("Start Computer game");
+        startComputer.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                mainWindow.dispose();
+                new computerPlayer();
+            }
+        });
+        gamePanel.add(startComputer);
     }
 
-    void showGame(){
-        headerLabel.setText("Welcome to Tic-Tac-Toe");
-
-        // JButton startGameButton = new JButton("Start Game");
-        // startGameButton.addActionListener(new ActionListener() {
-        //     public void actionPerformed(ActionEvent e){
-        //         window
-        //     }
-        // });
-
-       // gamePanel.add(startGameButton);
-        mainWindow.setVisible(true);
+    public static void main(String[] args){
+        new tttGame();
     }
-    
 }
