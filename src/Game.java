@@ -1,93 +1,13 @@
 import java.util.*;
-<<<<<<< HEAD
-
-public class Game {
-
-    private static String[][] gameBoard = new String[3][3];
-    private static int count = 0;
-    private Random piecePlacement = new Random();
-=======
 
 public class Game {
     private static String[][] gameBoard = new String[3][3];
     private static int count = 0;
-   // private Random piecePlacement = new Random();
->>>>>>> origin/Tyler
-    private int r;
-    private int c;
+    // private Random piecePlacement = new Random();
+    //private int r;
+    //private int c;
     
     public Game(){
-<<<<<<< HEAD
-        piecePlacement.ints(0,4);
-        r = piecePlacement;
-        c = piecePlacement;
-    }
-
-    public static void placeX(int row, int col){
-       gameBoard[row][col] = "X";
-       count++;
-       if (count > 4){
-        checkVictory("X", row, col);
-    }
-    }
-
-    public static void placeO(int row, int col){
-        gameBoard[row][col] = "O";
-        count++;
-        if (count > 4){
-            checkVictory("O", row, col);
-        }
-    }
-
-    public static boolean checkVictory(String lastPlayer, int r, int c){
-        boolean victory = false;
-        if (lastPlayer.equals("X")){
-
-            //Check diag
-            if (gameBoard[1][1].equals("X")){
-                if(gameBoard[0][0].equals("X")){
-                    if(gameBoard[2][2].equals("X")){
-                        victory = true;
-                    }
-                }
-                else if(gameBoard[0][2].equals("X")){
-                    if(gameBoard[2][0].equals("X")){
-                       victory = true;
-                    }
-                }
-            }
-            
-            //check adjacency
-            if(r == 0){
-                c = 0;
-                if(gameBoard[r+1][c].equals("X")){
-                    if(gameBoard[r+2][c].equals("X")){
-                       victory = true;
-                    }
-                }
-                if(gameBoard[r][c+1].equals("X")){
-                    if(gameBoard[r][c+2].equals("X")){
-                       victory = true;
-                    }
-                }
-            }
-
-            //check first row
-            if (r == 1){
-                c = 0;
-                if(gameBoard[r][c+1].equals("X")){
-                    if(gameBoard[r][c+2].equals("X")){
-                       victory = true;
-                    }
-                }
-                if(gameBoard[r][c+1].equals("X")){
-                    if(gameBoard[r][c+2].equals("X")){
-                       victory = true;
-                    }
-                }
-            }
-
-=======
         // piecePlacement.ints(0,4);
         // r = piecePlacement;
         // c = piecePlacement;
@@ -96,16 +16,22 @@ public class Game {
     public void placeX(int row, int col){
        gameBoard[row][col] = "X";
        count++;
+       System.out.println(Arrays.deepToString(gameBoard));
        if (count > 4){
-        checkVictory("X", row, col);
+           if (checkVictory("X", row, col)){
+               System.out.println("Player X has won!");
+           }
          }
     }
 
     public void placeO(int row, int col){
         gameBoard[row][col] = "O";
         count++;
+        System.out.println(Arrays.deepToString(gameBoard));
         if (count > 4){
-            checkVictory("O", row, col);
+            if (checkVictory("O", row, col)){
+                System.out.println("Player X has won!");
+            }
         }
     }
 
@@ -157,7 +83,6 @@ public class Game {
                 }
             }
 
->>>>>>> origin/Tyler
             //check second row
             if(r == 2){
                 c = 0;
@@ -257,24 +182,6 @@ public class Game {
         }
         else{
             victory = false;
-<<<<<<< HEAD
-        }
-        return victory;
-    }
-
-    public void computerMove(){
-        
-        if (player2.getPiece() == "X"){
-            if (gameBoard[r][c] = null){
-                Game.placeX(r,c);
-            }
-        }
-        if (player2.getPiece() == "O"){
-            if (gameBoard[r][c] = null){
-                Game.placeO(r,c);
-            }
-=======
->>>>>>> origin/Tyler
         }
         return victory;
     }

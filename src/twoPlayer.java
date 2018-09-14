@@ -73,18 +73,20 @@ public class twoPlayer extends JFrame implements ActionListener{
         setVisible(true);
     }
     public void actionPerformed(ActionEvent ae) {
-      //  Game g = new Game();
+        Game g = new Game();
         if(ae.getSource() == b1){
             if(b1Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[0][0] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(0, 0);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[0][0] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(0, 0);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
 
                 buttonPressed(b1);
@@ -99,13 +101,15 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b2Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[0][1] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(0, 1);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[0][1] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(0, 1);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b2);
                 b2Check = true;
@@ -117,13 +121,15 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b3Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[0][2] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(0, 2);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[0][2] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(0, 2);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b3);
                 b3Check = true;
@@ -135,13 +141,15 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b4Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[1][0] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(1, 0);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[1][0] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(1, 0);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b4);
                 b4Check = true;
@@ -153,13 +161,15 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b5Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[1][1] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(1, 1);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[1][1] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(1, 1);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b5);
                 b5Check = true;
@@ -171,13 +181,15 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b6Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[1][2] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(1, 2);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[1][2] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(1, 2);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b6);
                 b6Check = true;
@@ -189,13 +201,15 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b7Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[2][0] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(2, 0);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[2][0] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(2, 0);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b7);
                 b7Check = true;
@@ -207,13 +221,15 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b8Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[2][1] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(2, 1);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[2][1] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(2, 1);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b8);
                 b8Check = true;
@@ -225,13 +241,15 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b9Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-                    gameBoard[2][2] = "x";
+                    //gameBoard[0][0] = "x";
+                    g.placeX(2, 2);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
-                    gameBoard[2][2] = "o";
+                    //gameBoard[0][0] = "o";
+                    g.placeO(2, 2);
                     count++;
-                    System.out.println(Arrays.deepToString(gameBoard));
+                    //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b9);
                 b9Check = true;
