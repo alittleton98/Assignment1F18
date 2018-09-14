@@ -81,11 +81,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(0, 0);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("X", 0, 0)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(0, 0);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 0, 0)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
 
@@ -104,11 +114,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(0, 1);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("X", 0, 1)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(0, 1);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 0, 1)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b2);
@@ -124,11 +144,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(0, 2);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("X", 0, 2)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(0, 2);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 0, 2)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b3);
@@ -144,11 +174,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(1, 0);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("X", 1, 0)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(1, 0);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 1, 0)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b4);
@@ -164,11 +204,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(1, 1);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 1, 1)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(1, 1);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 1, 1)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b5);
@@ -184,11 +234,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(1, 2);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 1, 2)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(1, 2);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 1, 2)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b6);
@@ -204,11 +264,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(2, 0);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("X", 2, 0)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(2, 0);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 2, 0)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b7);
@@ -224,11 +294,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(2, 1);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("X", 2, 1)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(2, 1);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 2, 1)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b8);
@@ -244,11 +324,21 @@ public class twoPlayer extends JFrame implements ActionListener{
                     //gameBoard[0][0] = "x";
                     g.placeX(2, 2);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 2, 2)){
+                            System.out.println("Player X has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 } else if(playerTurn.equals("o")){
                     //gameBoard[0][0] = "o";
                     g.placeO(2, 2);
                     count++;
+                    if (count > 4){
+                        if (g.checkVictory("O", 2, 2)){
+                            System.out.println("Player O has won!");
+                        }
+                    }
                     //System.out.println(Arrays.deepToString(gameBoard));
                 }
                 buttonPressed(b9);
