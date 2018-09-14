@@ -44,7 +44,8 @@ public class Game {
         int row = r;
         int col = c;
         if (lastPlayer.equals("X")){
-            /*
+            
+
             //Check diag
             if (gameBoard[1][1].equals("X")){
                 if(gameBoard[0][0].equals("X")){
@@ -58,7 +59,7 @@ public class Game {
                     }
                 }
             }
-            */
+            
             //check adjacency
             if(row == 0){
                 col = 0;
