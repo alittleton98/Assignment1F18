@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.io.*;
+import java.util.*;
 
 public class tttGame{
     public tttGame() {
@@ -38,7 +39,6 @@ public class tttGame{
         gamePanel.setLayout(new GridLayout(3,1));
         mainWindow.add(gamePanel);
         gamePanel.add(headerLabel);
-
 
         JButton start2player = new JButton("Start 2-player game");
         start2player.addActionListener(new ActionListener() {
