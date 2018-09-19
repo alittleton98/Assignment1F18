@@ -82,39 +82,13 @@ public class twoPlayer extends JFrame implements ActionListener{
     }
     //button interactions
     public void actionPerformed(ActionEvent ae) {
-<<<<<<< HEAD
-        Game g = new Game();
-=======
->>>>>>> Tyler
         if(ae.getSource() == b1){
             if(b1Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(0, 0);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("X", 0, 0)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(0, 0);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 0, 0)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[0][0] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[0][0] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b1);
                 b1Check = true;
@@ -127,31 +101,9 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b2Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(0, 1);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("X", 0, 1)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(0, 1);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 0, 1)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[0][1] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[0][1] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b2);
                 b2Check = true;
@@ -163,31 +115,9 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b3Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(0, 2);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("X", 0, 2)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(0, 2);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 0, 2)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[0][2] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[0][2] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b3);
                 b3Check = true;
@@ -199,31 +129,9 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b4Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(1, 0);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("X", 1, 0)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(1, 0);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 1, 0)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[1][0] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[1][0] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b4);
                 b4Check = true;
@@ -235,31 +143,9 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b5Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(1, 1);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 1, 1)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(1, 1);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 1, 1)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[1][1] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[1][1] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b5);
                 b5Check = true;
@@ -271,31 +157,9 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b6Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(1, 2);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 1, 2)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(1, 2);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 1, 2)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[1][2] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[1][2] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b6);
                 b6Check = true;
@@ -307,31 +171,9 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b7Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(2, 0);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("X", 2, 0)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(2, 0);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 2, 0)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[2][0] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[2][0] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b7);
                 b7Check = true;
@@ -343,31 +185,9 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b8Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(2, 1);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("X", 2, 1)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(2, 1);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 2, 1)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[2][1] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[2][1] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b8);
                 b8Check = true;
@@ -379,31 +199,9 @@ public class twoPlayer extends JFrame implements ActionListener{
             if(b9Check == false){
                 //places tile into logic game
                 if(playerTurn.equals("x")){
-<<<<<<< HEAD
-                    //gameBoard[0][0] = "x";
-                    g.placeX(2, 2);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 2, 2)){
-                            System.out.println("Player X has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-                } else if(playerTurn.equals("o")){
-                    //gameBoard[0][0] = "o";
-                    g.placeO(2, 2);
-                    count++;
-                    if (count > 4){
-                        if (g.checkVictory("O", 2, 2)){
-                            System.out.println("Player O has won!");
-                        }
-                    }
-                    //System.out.println(Arrays.deepToString(gameBoard));
-=======
                     gameBoard[2][2] = "x";
                 } else if(playerTurn.equals("o")){
                     gameBoard[2][2] = "o";
->>>>>>> Tyler
                 }
                 buttonPressed(b9);
                 b9Check = true;
