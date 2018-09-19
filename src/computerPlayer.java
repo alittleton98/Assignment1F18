@@ -13,6 +13,7 @@ public class computerPlayer {
         JPanel panel = (JPanel)f.getContentPane();
         panel.setLayout(new GridLayout(3,3,4,3));
 
+        
         JButton b1 = new JButton("F");
         JButton b2 = new JButton("F");
         JButton b3 = new JButton("F");

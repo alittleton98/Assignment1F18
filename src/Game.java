@@ -1,6 +1,8 @@
 import java.util.*;
+import javax.swing.*;
 
 public class Game {
+<<<<<<< HEAD
     private static String[][] gameBoard = new String[3][3];
     private static int count = 0;
     // private Random piecePlacement = new Random();
@@ -73,8 +75,35 @@ public class Game {
                        victory = true;
                     }
                 }
-            }
+=======
 
+    public Game(){
+    }
+    
+    public Boolean victor(String[][] board, JFrame frame){
+        //Diagonal checks
+        if(board[1][1].equals("x")){
+            if(board[0][0].equals("x") && board[2][2].equals("x")){
+                messageHandler.playerXWonMessage(frame);
+                return true;
+            } else if(board[0][2].equals("x") && board[2][0].equals("x")){
+                messageHandler.playerXWonMessage(frame);
+                return true;
+            }
+        }
+        if(board[1][1].equals("o")){
+            if(board[0][0].equals("o") && board[2][2].equals("o")){
+                messageHandler.playerOWonMessage(frame);
+                return true;
+            } else if(board[0][2].equals("o") && board[2][0].equals("o")){
+                messageHandler.playerOWonMessage(frame);
+                return true;
+>>>>>>> Tyler
+            }
+        }
+        //
+
+<<<<<<< HEAD
             //check first row
             if (row == 1){
                 col = 0;
@@ -88,8 +117,20 @@ public class Game {
                        victory = true;
                     }
                 }
+=======
+        //Adjacency checks
+        if(board[0][0].equals("x")){
+            if(board[0][1].equals("x") && board[0][2].equals("x")){
+                messageHandler.playerXWonMessage(frame);
+                return true;
+            } else if(board[1][0].equals("x") && board[2][0].equals("x")){
+                messageHandler.playerXWonMessage(frame);
+                return true;
+>>>>>>> Tyler
             }
+        }
 
+<<<<<<< HEAD
             //check second row
             if(row == 2){
                 col = 0;
@@ -108,8 +149,28 @@ public class Game {
                        victory = true;
                     }
                 }
+=======
+        if(board[2][2].equals("x")){
+            if(board[2][1].equals("x") && board[2][0].equals("x")){
+                messageHandler.playerXWonMessage(frame);
+                return true;
+            } else if(board[1][2].equals("x") && board[0][2].equals("x")){
+                messageHandler.playerXWonMessage(frame);
+                return true;
             }
+        }
+        if(board[0][0].equals("o")){
+            if(board[0][1].equals("o") && board[0][2].equals("o")){
+                messageHandler.playerOWonMessage(frame);
+                return true;
+            } else if(board[1][0].equals("o") && board[2][0].equals("o")){
+                messageHandler.playerOWonMessage(frame);
+                return true;
+>>>>>>> Tyler
+            }
+        }
 
+<<<<<<< HEAD
             //check second column
             if (col == 2){
                 row = 0;
@@ -185,11 +246,39 @@ public class Game {
                        victory = true;
                     }
                 }
+=======
+        if(board[2][2].equals("o")){
+            if(board[2][1].equals("o") && board[2][0].equals("o")){
+                messageHandler.playerOWonMessage(frame);
+                return true;
+            } else if(board[1][2].equals("o") && board[0][2].equals("o")){
+                messageHandler.playerOWonMessage(frame);
+                return true;
             }
         }
-        else{
-            victory = false;
+        //
+        //straight checks
+        if(board[1][1].equals("x")){
+            if(board[1][0].equals("x") && board[1][2].equals("x")){
+                messageHandler.playerXWonMessage(frame);
+                return true;
+            } else if(board[0][1].equals("x") && board[2][1].equals("x")){
+                messageHandler.playerXWonMessage(frame);
+                return true;
+>>>>>>> Tyler
+            }
         }
-        return victory;
+        if(board[1][1].equals("o")){
+            if(board[1][0].equals("o") && board[1][2].equals("o")){
+                messageHandler.playerOWonMessage(frame);
+                return true;
+            } else if(board[0][1].equals("o") && board[2][1].equals("o")){
+                messageHandler.playerOWonMessage(frame);
+                return true;
+            }
+        }
+
+        return false;
     }
+
 }
