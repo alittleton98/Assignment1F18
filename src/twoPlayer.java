@@ -78,6 +78,7 @@ public class twoPlayer extends JFrame implements ActionListener{
         playerFrame.setSize(500,500);
         playerFrame.getContentPane().setBackground(Color.BLACK);
         playerFrame.setVisible(true);
+        tttGame.centerFrame(playerFrame);
 
     }
     //button interactions
