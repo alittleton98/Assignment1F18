@@ -1,6 +1,11 @@
 import javax.swing.*;
 
 public class messageHandler {
+
+    //Players to keep track of wins, easier to implement in message handler, wins detected here too
+    public static xPlayer x;
+    public static oPlayer o;
+
     public static void playerXMessage(){
         JOptionPane.showMessageDialog(null, "player x's turn");
     }
@@ -9,13 +14,13 @@ public class messageHandler {
     }
     public static void playerXWonMessage(JFrame frame){
         JOptionPane.showMessageDialog(null, "sike, PLAYER X WINS");
-
+        x.wins++;
         frame.dispose();
         new tttGame();
     }
     public static void playerOWonMessage(JFrame frame){
         JOptionPane.showMessageDialog(null, "sike, PLAYER O WINS");
-
+        o.wins++;
         frame.dispose();
         new tttGame();
     }
