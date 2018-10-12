@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.io.*;
 
 public class tttGame{
+
     public tttGame() {
 
         //creates main menu window for game 

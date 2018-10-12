@@ -9,11 +9,13 @@ public class messageHandler {
     }
     public static void playerXWonMessage(JFrame frame){
         JOptionPane.showMessageDialog(null, "sike, PLAYER X WINS");
+
         frame.dispose();
         new tttGame();
     }
     public static void playerOWonMessage(JFrame frame){
         JOptionPane.showMessageDialog(null, "sike, PLAYER O WINS");
+
         frame.dispose();
         new tttGame();
     }
