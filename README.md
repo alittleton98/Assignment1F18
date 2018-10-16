@@ -33,4 +33,4 @@ The public repository will be available on GitHub soon so that the game can be u
 
 ### Development Team
 
-Andrew Littleton and Tyler Nguyen
+Andrew Littleton, Tyler Nguyen, Tommy Nguyen, Nathan Bullock
