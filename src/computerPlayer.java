@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.io.*;
 import java.util.*;
 
-public class twoPlayer extends JFrame implements ActionListener{
+public class computerPlayer extends JFrame implements ActionListener{
     private JFrame playerFrame = new JFrame("Single Player mode");
     private String[][] gameBoard = new String[3][3];
     private int count = 0;
@@ -94,6 +94,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b1);
                 b1Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -109,6 +110,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b2);
                 b2Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -123,6 +125,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b3);
                 b3Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -137,6 +140,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b4);
                 b4Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -151,6 +155,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b5);
                 b5Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -165,6 +170,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b6);
                 b6Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -179,6 +185,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b7);
                 b7Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -193,6 +200,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b8);
                 b8Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -207,6 +215,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 }
                 buttonPressed(b9);
                 b9Check = true;
+                computerTurn();
             } else {
                 messageHandler.buttonAlreadyPressed();
             }
@@ -226,7 +235,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b1);
                 b1Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
 
         }
@@ -241,7 +250,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b2);
                 b2Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
         }     
         if(b == b3){
@@ -255,7 +264,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b3);
                 b3Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
         }     
         if(b == b4){
@@ -269,7 +278,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b4);
                 b4Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
         }     
         if(b == b5){
@@ -283,7 +292,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b5);
                 b5Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
         }     
         if(b == b6){
@@ -297,7 +306,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b6);
                 b6Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
         }     
         if(b == b7){
@@ -311,7 +320,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b7);
                 b7Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
         }     
         if(b == b8){
@@ -325,7 +334,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b8);
                 b8Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
         }     
         if(b == b9){
@@ -339,7 +348,7 @@ public class twoPlayer extends JFrame implements ActionListener{
                 buttonPressed(b9);
                 b9Check = true;
             } else {
-                messageHandler.buttonAlreadyPressed();
+                computerTurn();
             }
         }
     }
@@ -349,7 +358,7 @@ public class twoPlayer extends JFrame implements ActionListener{
         count++;
         if(playerTurn.equals("x")) {
             changeXImage(button);
-            messageHandler.playerOMessage();
+            //messageHandler.playerOMessage();
             checkForWinner();
             playerTurn = "o";
             playerLabel.setText("player o's turn");
@@ -436,6 +445,34 @@ public class twoPlayer extends JFrame implements ActionListener{
     }
 
     public void computerTurn(){
-        randomTile = rand.ints(1, 10);
+        randomTile = rand.nextInt(9) + 1;
+
+        if (randomTile == 1 ){
+            computerTurnPerformed(b1);
+        }
+        if (randomTile == 2 ){
+            computerTurnPerformed(b2);
+        }
+        if (randomTile == 3 ){
+            computerTurnPerformed(b3);
+        }
+        if (randomTile == 4 ){
+            computerTurnPerformed(b4);
+        }
+        if (randomTile == 5 ){
+            computerTurnPerformed(b5);
+        }
+        if (randomTile == 6 ){
+            computerTurnPerformed(b6);
+        }
+        if (randomTile == 7 ){
+            computerTurnPerformed(b7);
+        }
+        if (randomTile == 8 ){
+            computerTurnPerformed(b8);
+        }
+        if (randomTile == 9 ){
+            computerTurnPerformed(b9);
+        }
     }
 }
