@@ -29,6 +29,7 @@ public class characterSelect extends JFrame implements ActionListener {
     Boolean c9Check = false;
 
     Boolean turnChange = false;
+    
 
     public characterSelect() {
         JPanel panel = (JPanel)f.getContentPane();
