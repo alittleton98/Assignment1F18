@@ -14,13 +14,7 @@ public class tttGame{
         mainWindow.setVisible(true);
         mainWindow.setSize(400, 400);
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-<<<<<<< HEAD
-        
         centerFrame(mainWindow);
-
-=======
-        centerFrame(mainWindow);
->>>>>>> Tyler
         gamePanel.setLayout(new GridLayout(3,1));
         mainWindow.add(gamePanel);
         gamePanel.add(headerLabel);
@@ -36,17 +30,11 @@ public class tttGame{
         gamePanel.add(start2player);
 
         //Closes main menu and starts computer game
-        JButton startComputer = new JButton("Start Computer game (WIP)");
+        JButton startComputer = new JButton("Start Computer game");
         startComputer.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-<<<<<<< HEAD
-                //mainWindow.dispose();
-                //new computerPlayer();
-                JOptionPane.showMessageDialog(null, "Game mode currently not available");
-=======
                 mainWindow.dispose();   
                 new computerPlayer();
->>>>>>> Tyler
             }
         });
         gamePanel.add(startComputer);
@@ -62,15 +50,6 @@ public class tttGame{
         //     }
         // });
         // gamePanel.add(selectCharacter);
-    }
-
-    public static void centerFrame(JFrame frame){
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        int w = frame.getSize().width;
-        int h = frame.getSize().height;
-        int x = (dim.width - w) / 2;
-        int y = (dim.height - h) / 2;
-        frame.setLocation(x, y);
     }
 
     public static void centerFrame(JFrame frame){
