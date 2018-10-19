@@ -42,6 +42,7 @@ public class tttGame{
                 sound thisSound = new sound();
                 new computerPlayer();
             }
+            
         });
         gamePanel.add(startComputer);
 
