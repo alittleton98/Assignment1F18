@@ -357,7 +357,7 @@ public class computerPlayer extends JFrame implements ActionListener{
     public void buttonPressed(JButton button){
         count++;
         if(playerTurn.equals("x")) {
-            //changeXImage(button);
+            changeXImage(button);
             //messageHandler.playerOMessage();
             checkForWinner();
             playerTurn = "o";
@@ -366,7 +366,7 @@ public class computerPlayer extends JFrame implements ActionListener{
 
 
         } else if(playerTurn.equals("o")){
-            //changeOImage(button);
+            changeOImage(button);
             messageHandler.playerXMessage();
             checkForWinner();
             playerTurn = "x";

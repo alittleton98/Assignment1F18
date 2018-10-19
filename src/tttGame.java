@@ -33,7 +33,7 @@ public class tttGame{
         JButton startComputer = new JButton("Start Computer game");
         startComputer.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                mainWindow.dispose();
+                mainWindow.dispose();   
                 new computerPlayer();
             }
         });
