@@ -25,5 +25,11 @@ public class messageHandler {
     public static void buttonAlreadyPressed(){
         JOptionPane.showMessageDialog(null, "This button has already been pressed.");
     }
+    public static void charactersSelected(JFrame cFrame, JFrame tFrame){
+        JOptionPane.showMessageDialog(null, "Character selection has been submitted");
+        cFrame.dispose();
+        tFrame.setVisible(true);
+    }
+    
     
 }

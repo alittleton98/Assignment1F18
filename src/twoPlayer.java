@@ -8,6 +8,7 @@ import java.util.*;
 
 public class twoPlayer extends JFrame implements ActionListener{
     private JFrame playerFrame = new JFrame("Two player mode");
+    private JFrame characterFrame = new JFrame("Character Select");
     private String[][] gameBoard = new String[3][3];
     private int count = 0;
 
@@ -15,8 +16,9 @@ public class twoPlayer extends JFrame implements ActionListener{
     private JLabel playerLabel;
     private String playerTurn = "x";
 
+    //default icons set to x and o
     String imageX = "/images/redX.jpg";
-    String imageO = "/images/blue.jpg";
+    String imageO = "/images/blue.jpg";     
 
     //Checks if the tile has already been pressed
     Boolean b1Check = false;
@@ -28,6 +30,8 @@ public class twoPlayer extends JFrame implements ActionListener{
     Boolean b7Check = false;
     Boolean b8Check = false;
     Boolean b9Check = false;
+
+   // characterSelect c = new characterSelect();
 
     public twoPlayer() {
         populateBoard(gameBoard);
@@ -73,12 +77,97 @@ public class twoPlayer extends JFrame implements ActionListener{
         //sets the size for first button which defaults the others to the same size
         b1.setPreferredSize(new Dimension(100,100));
 
-        playerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setCustomFrame(characterFrame);
+        characterSelect(characterFrame, playerFrame);
+        characterFrame.setVisible(true);
+
+
+        setCustomFrame(playerFrame);
         playerFrame.setLayout(new GridLayout(4,3,3,3));
+<<<<<<< HEAD
         playerFrame.setSize(500,500);
         playerFrame.getContentPane().setBackground(Color.BLACK);
         playerFrame.setVisible(true);
         tttGame.centerFrame(playerFrame);
+=======
+        //playerFrame.setVisible(true);
+
+        tttGame.centerFrame(playerFrame);
+        tttGame.centerFrame(characterFrame);
+    }
+
+    public void setCustomFrame(JFrame frame){
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500,500);
+        frame.getContentPane().setBackground(Color.BLACK);
+    }
+
+    //Creates a frame to allow players to choose characters
+    public void characterSelect(JFrame cFrame, JFrame tFrame){
+        String[] xCharaters = new String[] {"red x", "link", "moon","pumpkin","wizard"};
+        String[] oCharaters = new String[] {"blue o","grunge","megaman","white figure"};
+        JComboBox<String> xC = new JComboBox<>(xCharaters);
+        JComboBox<String> oC = new JComboBox<>(oCharaters);
+
+        xC.setBounds(50, 50, 150, 20);
+        oC.setBounds(250, 50, 150, 20);
+
+        //Allows drop down box to communicate with the game to change characters
+        ActionListener XselectionListener = new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String x = (String) xC.getSelectedItem();
+                switch(x){
+                    case "red x": imageX = "/images/redX.jpg";
+                        break;
+                    case "link": imageX = "/images/link.png";
+                        break;
+                    case "moon": imageX = "/images/moon.jpeg";
+                        break;
+                    case "pumpkin": imageX = "/images/pumpkin.jpeg";
+                        break;
+                    case "wizard": imageX = "/images/wizard.jpeg";
+                        break;
+                }
+                
+            }
+        };
+        ActionListener OselectionListener = new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String o = (String) oC.getSelectedItem();
+                switch(o){
+                    case "blue o": imageO = "/images/blue.jpg";
+                        break;
+                    case "grunge": imageO = "/images/grunge.jpeg";
+                        break;
+                    case "megaman": imageO = "/images/megaman.png";
+                        break;
+                    case "white figure": imageO = "/images/whitefigure.png";
+                        break;
+
+                }
+                
+            }
+        };
+        xC.addActionListener(XselectionListener);
+        oC.addActionListener(OselectionListener);
+
+        cFrame.add(xC);
+        cFrame.add(oC);
+
+
+        //Submits the characters and begins the game
+        JButton b = new JButton("Submit Characters");
+        b.setBounds(cFrame.getWidth()/2, 100, 150, 20);
+        cFrame.add(b);
+        b.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                messageHandler.charactersSelected(cFrame, tFrame);
+            }
+        });
+>>>>>>> Tyler
 
     }
     //button interactions
@@ -221,9 +310,6 @@ public class twoPlayer extends JFrame implements ActionListener{
             checkForWinner();
             playerTurn = "o";
             playerLabel.setText("player o's turn");
-
-
-
         } else if(playerTurn.equals("o")){
             changeOImage(button);
             messageHandler.playerXMessage();
@@ -249,6 +335,7 @@ public class twoPlayer extends JFrame implements ActionListener{
     //Changes the buttton's icon image to corresponding turn
     public void changeOImage(JButton b){
         try{
+            //characterSelect c = new characterSelect();
             java.net.URL imgURL = getClass().getResource(imageO);
             ImageIcon icon = new ImageIcon(imgURL);
             Image img = icon.getImage();
@@ -276,6 +363,8 @@ public class twoPlayer extends JFrame implements ActionListener{
         
         }
     }
+
+    //populates an empty board that communicates directly with the actual gamae
     public void populateBoard(String[][] board){
         board[0][0]= "not used";
         board[0][1]= "not used";
@@ -286,8 +375,8 @@ public class twoPlayer extends JFrame implements ActionListener{
         board[2][0]= "not used";
         board[2][1]= "not used";
         board[2][2]= "not used";
-        System.out.println("Board populated");
     }
+    //game tie check
     public Boolean boardFull(){
         if(b1Check == true 
             && b2Check == true
