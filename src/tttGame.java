@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.io.*;
+import java.io.File;
 
 public class tttGame{
     public tttGame() {
@@ -19,11 +20,15 @@ public class tttGame{
         mainWindow.add(gamePanel);
         gamePanel.add(headerLabel);
 
+        sound thisSound = new sound();
+
         //Closes main menu and starts a 2 player game
         JButton start2player = new JButton("Start 2-player game");
         start2player.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 mainWindow.dispose();
+                //accessing sound class to play sound when a button is clicked
+                thisSound.playRing();
                 new twoPlayer();
             }
         });
@@ -33,7 +38,8 @@ public class tttGame{
         JButton startComputer = new JButton("Start Computer game");
         startComputer.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                mainWindow.dispose();   
+                mainWindow.dispose();
+                sound thisSound = new sound();
                 new computerPlayer();
             }
         });

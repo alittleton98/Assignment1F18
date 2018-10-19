@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.io.*;
 import java.util.*;
 
+
 public class twoPlayer extends JFrame implements ActionListener{
     private JFrame playerFrame = new JFrame("Two player mode");
     private JFrame characterFrame = new JFrame("Character Select");
@@ -15,6 +16,8 @@ public class twoPlayer extends JFrame implements ActionListener{
     private JButton b1,b2,b3,b4,b5,b6,b7,b8,b9;
     private JLabel playerLabel;
     private String playerTurn = "x";
+
+    sound thisSound = new sound();
 
     //default icons set to x and o
     String imageX = "/images/redX.jpg";
@@ -172,6 +175,7 @@ public class twoPlayer extends JFrame implements ActionListener{
     }
     //button interactions
     public void actionPerformed(ActionEvent ae) {
+        thisSound.playRing();
         if(ae.getSource() == b1){
             if(b1Check == false){
                 //places tile into logic game

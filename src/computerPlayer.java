@@ -17,6 +17,8 @@ public class computerPlayer extends JFrame implements ActionListener{
     private JLabel playerLabel;
     private String playerTurn = "x";
 
+    sound thisSound = new sound();
+
     String imageX = "/images/redX.jpg";
     String imageO = "/images/blue.jpg";
 
@@ -84,6 +86,7 @@ public class computerPlayer extends JFrame implements ActionListener{
     }
     //button interactions
     public void actionPerformed(ActionEvent ae) {
+        thisSound.playRing();
         if(ae.getSource() == b1){
             if(b1Check == false){
                 //places tile into logic game
